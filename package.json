@@ -1,18 +1,17 @@
 {
-  "name": "is-illiath-awake",
+  "name": "yay-for-time",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "setup": "node setup.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "alisww",
+  "license": "Unlicense",
   "dependencies": {
     "better-sqlite3": "^3.1.2",
     "irc": "^0.5.2",
     "moment": "^2.18.1",
-    "moment-timezone": "^0.5.13",
-    "sqlite3": "^3.1.9"
+    "moment-timezone": "^0.5.13"
   }
 }
