@@ -6,6 +6,7 @@ var db = require('./db.js');
 
 const channels = [];
 const server = "";
+const puppet_channel = "";
 
 const help_regex = /!usage/g;
 const timezone_regex = /[A-Z]+(?:\w|_)+\/(?:\w|_)+/g;
@@ -99,4 +100,18 @@ client.addListener('error', function(message) {
 	console.log("error: ",message);
 });
 
+const readline = require('readline');
 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.on('line', (line) => {
+	let split = line.split(" ");
+	if (split[0] == "/me") {
+		client.action(puppet_channel,split.slice(1).join(" "));		
+	} else {
+		client.say(puppet_channel,line);		
+	}
+});
