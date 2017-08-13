@@ -4,8 +4,8 @@ var moment = require('moment-timezone');
 var irc = require('irc');
 var db = require('./db.js');
 
-const channels = ["#yayforqueers","#queerscouts"];
-const server = "irc.blitzed.org";
+const channels = [];
+const server = "";
 
 const help_regex = /!usage/g;
 const timezone_regex = /[A-Z]+(?:\w|_)+\/(?:\w|_)+/g;
@@ -98,4 +98,5 @@ client.addListener('message',function(from,to,message) {
 client.addListener('error', function(message) {
 	console.log("error: ",message);
 });
+
 

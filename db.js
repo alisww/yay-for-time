@@ -21,4 +21,4 @@ function update(user,timezone) {
 	db.prepare("UPDATE users SET timezone = ? WHERE user = ?",[timezone,user]).run([user,timezone]);
 }
 
-module.exports = { get: get, setup: setup, insert: insert };
+module.exports = { get: get, setup: setup, insert: insert, update: update };
